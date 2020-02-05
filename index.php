@@ -13,11 +13,11 @@
     <div class="container page">
         <h1>Re-flax Message Wall</h1>
         <p>When Love Takes Over</p>
-
+        <p><a href="/create">Laat Bericht Achter</a></p>
     </div>
 </main>
 
-<!--header-->
+<!--footer-->
 <?php include 'default/footer.php'; ?>
 
 </body>

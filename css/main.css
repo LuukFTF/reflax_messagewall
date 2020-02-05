@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    color: deeppink;
+    color: orange;
 }
 
 .menu {
@@ -44,7 +44,7 @@ a {
 }
 
 .main {
-    background-color: #15000a;
+    background-color: #170c00;
     display: block;
 
     margin: 0 auto;

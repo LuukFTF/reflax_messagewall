@@ -1,3 +1,3 @@
 <footer class="footer">
-    <h2>Footer</h2>
+    <a href="https://re-flax.nl/">Re-flax.nl</a>
 </footer>
