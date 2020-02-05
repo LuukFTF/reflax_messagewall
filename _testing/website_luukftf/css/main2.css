@@ -1,0 +1,55 @@
+body {
+    background-color: #313737;
+    color: #d3dede;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-family: 'Comic Sans MS';
+    color: #d3dede;
+}
+
+p {
+    font-family: 'Arial';
+}
+
+
+a {
+    color: deeppink;
+}
+
+s
+.linkto {
+    color: cornflowerblue;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-item {
+    flex-grow: 1;
+    text-align: center;
+    list-style-type: none;
+}
+
+.menu-item a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    background-color: #a4baba;
+}
+main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.container {
+
+}
+
+.item {
+
+}
