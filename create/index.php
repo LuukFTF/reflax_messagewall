@@ -1,4 +1,14 @@
 <?php
+
+$host       = "localhost";
+$database   = "reflax_messagewall";
+$user       = "root";
+$password   = "";
+
+$db = mysqli_connect($host, $user, $password, $database)
+or die("Error: " . mysqli_connect_error());;
+
+
 //variables
 $name = '';
 $email = '';
@@ -34,6 +44,28 @@ if (isset($_POST['submit'])) {
     };
 
 };
+
+if (isset($_POST['submit'])) {
+
+    if (empty($errors)) {
+        $query = "
+            INSERT INTO messages (name, email, message)
+            VALUES ('$name', '$email', '$message')";
+
+        $result = mysqli_query($db, $query)
+        or die('Error: ' . $query);
+    }
+
+    if ($result) {
+        echo 'Added Successfully!';
+        exit;
+    } else {
+        $errors[] = 'Oepsie Woopsie Database Qwerie: ' . mysqli_error($db);
+    }
+
+    mysqli_close($db);
+}
+
 
 ?>
 

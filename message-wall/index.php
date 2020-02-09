@@ -1,3 +1,35 @@
+<?php
+//sql database
+$db =  mysqli_connect(
+    'localhost',
+    'root',
+    '',
+    'reflax_messagewall');
+
+$query = "
+SELECT * 
+FROM messages 
+";
+
+$result = mysqli_query($db, $query)
+or die('Error '.mysqli_error($db).' with query '.$query);
+
+$messages = [];
+
+while($row = mysqli_fetch_assoc($result))
+{
+    // elke rij (dit is een album) wordt aan de array 'albums' toegevoegd.
+    $messages[] = $row;
+}
+
+mysqli_close($db);
+
+$x = '';
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +43,25 @@
 <main class="main">
     <div class="container page">
         <h1>Message Wall</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <p>Door Piet</p>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <p>Door Piet</p>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <p>Door Piet</p>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <p>Door Piet</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <p>Door Piet</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Message</th>
+            </tr>
+            </thead>
+            <body>
+            <?php foreach ($messages as $message) : $x++ ?>
+                <?php $_POST['id'] = $message['id']; ?>
+                <tr>
+                    <td><?= $message['name'] ?></td>
+                    <td><?= $message['message'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </body>
+        </table>
+
     </div>
 </main>
 
