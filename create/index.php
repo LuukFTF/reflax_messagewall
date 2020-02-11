@@ -88,8 +88,8 @@ if (isset($_POST['submit'])) {
         <form
             action=""
             method="post">
-            <p>Name: <input type="text" name="name" value='<?=htmlspecialchars($name, ENT_QUOTES)?>'</p>
             <p>E-mail: <input type="text" name="email" value='<?=htmlspecialchars($email, ENT_QUOTES)?>'></p>
+            <p>Name: <input type="text" name="name" value='<?=htmlspecialchars($name, ENT_QUOTES)?>'</p>
             <p>Message: <textarea name="message"><?=htmlspecialchars($message, ENT_QUOTES)?></textarea></p>
             <p><input type="checkbox" name="tc" value='<?=htmlspecialchars($tc, ENT_QUOTES)?>'> I accept the terms &amp; conditions </p>
             <input type="submit" name="submit" value="Send Message">

@@ -15,12 +15,6 @@ if (isset($_POST['submit'])) {
         $username = $_POST['username'];
     };
 
-    if (!isset($_POST['email']) || $_POST['email'] === '') {
-        $ok = false;
-    } else {
-        $email = $_POST['email'];
-    };
-
     if (!isset($_POST['password']) || $_POST['password'] === '') {
         $ok = false;
     } else {
@@ -53,7 +47,6 @@ if (isset($_POST['submit'])) {
                 action=""
                 method="post"
         <p>Username: <input type="text" name="username" value='<?=$username?>'></p>
-        <p>E-Mail: <input type="text" name="email" value='<?=$email?>'></p>
         <p>Password: <input type="password" name="password" value='<?=$password?>'></p>
         <input type="submit" name="submit" value="Login">
         </form>
