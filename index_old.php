@@ -9,13 +9,11 @@
 <!--header-->
 <?php include 'default/header.php'; ?>
 
-<main>
-    <div class="parent-main">
-        <div class="item">
-            <h1>Re-flax Message Wall</h1>
-            <p>When Love Takes Over</p>
-            <p><a href="/create">Laat Bericht Achter</a></p>
-        </div>
+<main class="main">
+    <div class="container page">
+        <h1>Re-flax Message Wall</h1>
+        <p>When Love Takes Over</p>
+        <p><a href="/create">Laat Bericht Achter</a></p>
     </div>
 </main>
 

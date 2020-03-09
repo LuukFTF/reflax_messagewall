@@ -34,36 +34,31 @@ $x = '';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="/css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Wall</title>
 </head>
 
 
-<main class="main">
-    <div class="container page">
-        <h1>Message Wall</h1>
-
-        <table>
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Message</th>
-            </tr>
-            </thead>
-            <body>
+<main>
+    <h1>Message Wall</h1>
+    <div class="parent-main">
             <?php foreach ($messages as $message) : $x++ ?>
                 <?php $_POST['id'] = $message['id']; ?>
-                <tr>
-                    <td><?= $message['name'] ?></td>
-                    <td><?= $message['message'] ?></td>
-                </tr>
+                    <div class="item">
+                    <h1>Name</h1>
+                    <?= $message['name'] ?>
+                    <h1>Message</h1>
+                    <?= $message['message'] ?>
+                    </div>
             <?php endforeach; ?>
-            </body>
-        </table>
-
     </div>
 </main>
+
+
+
+
+
 
 <!--footer-->
 <?php include '../default/footer2.php'; ?>

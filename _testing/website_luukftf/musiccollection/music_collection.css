@@ -1,9 +1,0 @@
-tr:nth-child(2n) {
-    color: black;
-    background-color: #a5a5a5;
-}
-
-td {
-    padding: 5px;
-    margin: 10px;
-}

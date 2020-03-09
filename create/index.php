@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="/css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re-flax Create Message</title>
 </head>
@@ -82,18 +82,20 @@ if (isset($_POST['submit'])) {
 <!--header-->
 <?php include '../default/header.php'; ?>
 
-<main class="main">
-    <div class="container page">
+<main>
+    <div class="parent-main">
+        <div class="item">
         <h1>Create Message</h1>
-        <form
-            action=""
-            method="post">
-            <p>E-mail: <input type="text" name="email" value='<?=htmlspecialchars($email, ENT_QUOTES)?>'></p>
-            <p>Name: <input type="text" name="name" value='<?=htmlspecialchars($name, ENT_QUOTES)?>'</p>
-            <p>Message: <textarea name="message"><?=htmlspecialchars($message, ENT_QUOTES)?></textarea></p>
-            <p><input type="checkbox" name="tc" value='<?=htmlspecialchars($tc, ENT_QUOTES)?>'> I accept the terms &amp; conditions </p>
-            <input type="submit" name="submit" value="Send Message">
-        </form>
+            <form
+                action=""
+                method="post">
+<!--                <p>E-mail: <input type="text" name="email" value='--><?//=htmlspecialchars($email, ENT_QUOTES)?><!--'></p>-->
+                <p>Name: <input type="text" name="name" value='<?=htmlspecialchars($name, ENT_QUOTES)?>'</p>
+                <p>Message: <textarea name="message"><?=htmlspecialchars($message, ENT_QUOTES)?></textarea></p>
+                <p><input type="checkbox" name="tc" value='<?=htmlspecialchars($tc, ENT_QUOTES)?>'> I accept the terms &amp; conditions </p>
+                <input type="submit" name="submit" value="Send Message">
+            </form>
+        </div>
     </div>
 </main>
 
