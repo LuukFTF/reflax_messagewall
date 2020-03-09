@@ -1,0 +1,134 @@
+/*
+* {
+    border: 1px solid red;
+}
+ */
+
+:root {
+    --header-size: 145px;
+}
+
+
+body {
+    background-image: url("../img/Wall_of_Love_BG.jpg");
+    background-color: var(--main-bg-color);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center;
+
+    color: #2a2a2a;
+    font-family: 'Segoe Print', "Times New Roman", Times, serif, 'Arial';
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden; /* Hide scrollbars */
+}
+
+
+
+main {
+    margin: 3% auto;
+    width: 90%;
+
+}
+
+
+.message {
+    display: block;
+    font-size: 1.8em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.name {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.parent-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    display: block;
+    flex-basis: 29%;
+
+    justify-content: space-between;
+
+    /*background-color: rgba(230,230,230,0.7);*/
+    /*box-shadow: 4px 4px 5px rgba(0,0,0,0.2);*/
+
+    margin: 10px;
+    padding: 20px;
+
+}
+
+
+
+/*.main {*/
+/*     background-color: #170c00;*/
+/*     display: block;*/
+
+/*     margin: 0 auto;*/
+
+/*     padding: 100px;*/
+
+/*     width: 70%;*/
+/*     height: auto;*/
+/*     min-height: 50vh;*/
+/* }*/
+
+.header {
+    background-color: #212529;
+    display: block;
+
+    margin: 0 auto;
+
+    --header-padding: 20px;
+    padding: var(--header-padding);
+
+    width: calc(100% - 2 * var(--header-padding));
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    z-index: 2; /* Stay on top */
+}
+
+/*.page {*/
+/*    background-color: #2a2a2a;*/
+/*    display: block;*/
+
+/*    margin: 0 auto;*/
+
+
+/*    padding: 100px;*/
+
+/*    width: auto;*/
+/*    height: auto;*/
+/*}*/
+
+.footer {
+    background-color: #212529;
+    display: inline-block;
+    color: white;
+
+    margin: 0 auto;
+
+    padding: 20px 100px;
+
+    width: calc(100% - 2 * 100px);
+    height: auto;
+}

@@ -45,8 +45,10 @@ $x = '';
         <?php foreach ($messages as $message) : $x++ ?>
             <?php $_POST['id'] = $message['id']; ?>
                 <div class="item">
-                    <div class="message"> <?= $message['message'] ?> </div>
-                    <div class="name"> <?= $message['name'] ?></div>
+                <h1>Name</h1>
+                <?= $message['name'] ?>
+                <h1>Message</h1>
+                <?= $message['message'] ?>
                 </div>
         <?php endforeach; ?>
     </div>
